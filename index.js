@@ -48,7 +48,20 @@ else if(argv.age && typeof argv.age =='number'){
 
 
 if(argv.output == 'excel'){
-	fs.writeFile('data.xlsx',excel(output),'binary');
+	
+}
+switch(argv.output){
+	case 'excel':
+		var fileName = argv.fileName || 'data';
+		fs.writeFile(fileName+'.xlsx',excel(output),'binary');
+	break;
+	case 'json':
+		var fileName = argv.fileName || 'data';
+		fs.writeFile(fileName+'.json',JSON.stringify(output),'binary');
+	break;
+	default:
+var fileName = argv.fileName || 'data';
+		fs.writeFile(fileName+'.json',JSON.stringify(output),'binary');
 }
 
 
