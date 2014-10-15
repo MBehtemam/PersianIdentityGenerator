@@ -1,0 +1,24 @@
+{
+  "name": "PersianIdentityGenerator",
+  "version": "0.0.0",
+  "description": "Persian Identity and Fake information generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Persian",
+    "Identity",
+    "fake",
+    "identity",
+    "fake",
+    "information"
+  ],
+  "author": "Mohammad Bagher Ehtemam",
+  "license": "ISC",
+  "dependencies": {
+    "json2xls": "0.0.5",
+    "optimist": "^0.6.1",
+    "underscore": "^1.7.0"
+  }
+}
