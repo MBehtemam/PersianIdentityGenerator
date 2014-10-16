@@ -1,5 +1,6 @@
 var Optimist = require('optimist');
 var Human = require('./src/Human.js');
+var Address = require('./src/Address.js');
 var excel = require('json2xls');
 var fs = require('fs');
 var _ = require('underscore');
@@ -43,6 +44,18 @@ if (argv.age && typeof argv.age == 'boolean') {
         output[i].age = Human.age();
     }
 }
+
+//adding province
+if (argv.province && typeof argv.province == 'boolean') {
+    output.forEach(function(obj) {
+        obj.province = Address.provinces();
+    });
+} else if (argv.province && typeof argv.province == 'number') {
+    for (var i = 0; i < argv.province; i++) {
+        output[i].province = Address.provinces();
+    }
+}
+
 
 switch (argv.output) {
     case 'excel':
