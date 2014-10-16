@@ -58,7 +58,3 @@ switch (argv.output) {
         fs.writeFile(fileName + '.json', JSON.stringify(output), 'binary');
 }
 
-
-
-
-console.log(output);
