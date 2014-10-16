@@ -64,10 +64,11 @@ switch (argv.output) {
         break;
     case 'json':
         var fileName = argv.fileName || 'data';
-        fs.writeFile(fileName + '.json', JSON.stringify(output), 'binary');
+        fs.writeFile(fileName + '.json', JSON.stringify(output), 'utf8');
         break;
     default:
         var fileName = argv.fileName || 'data';
-        fs.writeFile(fileName + '.json', JSON.stringify(output), 'binary');
+        fs.writeFile(fileName + '.json', JSON.stringify(output), 'utf8');
 }
+console.log(output);
 
